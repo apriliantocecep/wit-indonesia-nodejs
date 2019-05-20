@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "52ac92cf-2d2f-4260-91a7-858f813bf20f",
+		"name": "Cecep Aprilianto - WIT Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Garages",
+			"description": "",
+			"item": [
+				{
+					"name": "All Garages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3000/garage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"garage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Garages",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Garage 1\",\n\t\"address\": \"Jakarta\",\n\t\"phone\": \"0988786767\",\n\t\"email\": \"garasi1@gmail.com\",\n\t\"max_cars\": \"300\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/garage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"garage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Garages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3000/garage/5ce2fd3a2d676d14495050e0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"garage",
+								"5ce2fd3a2d676d14495050e0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Garages",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Garage 1 edited again\",\n\t\"address\": \"Jakarta\",\n\t\"phone\": \"0988786767\",\n\t\"email\": \"garasi1@gmail.com\",\n\t\"max_cars\": \"300\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/garage/edit/5ce2e2737aade411b53b97dc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"garage",
+								"edit",
+								"5ce2e2737aade411b53b97dc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Garages",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/garage/delete/5ce2fd3a2d676d14495050e0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"garage",
+								"delete",
+								"5ce2fd3a2d676d14495050e0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Park Cars",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"car_id\": \"5ce337d065000217bef6750c\",\n\t\"garage_id\": \"5ce2fd3a2d676d14495050e0\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/car/park",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car",
+								"park"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cars",
+			"description": "",
+			"item": [
+				{
+					"name": "All Cars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3000/car",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Cars",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"brand\": \"Mitsubishi 2\",\n\t\"model\": \"Expander 2\",\n\t\"year\": \"2012\",\n\t\"color\": \"Black\",\n\t\"mileage\": \"0\",\n\t\"engine\": \"0\",\n\t\"power\": \"500\",\n\t\"registration_date\": \"2012-01-01\",\n\t\"price\": \"200000000\",\n\t\"garage\": \"5ce2eff57aade411b53b97dd\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/car",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Cars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3000/car/5ce327f01e56a51612a5d86a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car",
+								"5ce327f01e56a51612a5d86a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cars",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"brand\": \"Mitsubishi 1 edited\",\n\t\"model\": \"Expander 1 edited\",\n\t\"year\": \"2012\",\n\t\"color\": \"Black\",\n\t\"mileage\": \"0\",\n\t\"engine\": \"0\",\n\t\"power\": \"500\",\n\t\"registration_date\": \"2012-01-01\",\n\t\"price\": \"500000000\",\n\t\"garage\": \"5ce2fd3a2d676d14495050e0\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/car/edit/5ce337d065000217bef6750c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car",
+								"edit",
+								"5ce337d065000217bef6750c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cars",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/car/delete/5ce328571e56a51612a5d86c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car",
+								"delete",
+								"5ce328571e56a51612a5d86c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
